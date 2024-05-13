@@ -1,19 +1,27 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import ProductCard from './components/Card/index'; // Importe o componente ProductCard
+import ProductCard from './components/Card/index'; 
 
 const App = () => {
-  const productData = {
+  const productData1 = {
     title: 'Beef Burguer',
     description: '70 calorias',
     price: 12.99,
-    image: 'https://br.freepik.com/fotos-gratis/hamburguer-saboroso-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo_38117312.htm#query=hamburger&position=0&from_view=keyword&track=sph&uuid=673bdb6b-9872-43e1-8304-e1dc7dce6afd',
+    image: './assets/hamburguer.jpg',
   };
+  
+    const productData2 = {
+      title: 'Pancakes',
+      description: '50 calorias',
+      price: 15.99,
+      image: './assets/panqueca.png',
+    };
 
   return (
     <View>
       <Text>COMANDA</Text>
-      <ProductCard product={productData} /> {/* Passando os dados do produto para o componente ProductCard */}
+      <ProductCard product={productData1} />     
+      <ProductCard product={productData2} />
     </View>
   );
 };
